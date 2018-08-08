@@ -9,11 +9,10 @@ section.sect_form
       .row
         .col-lg-6.mb-1
           input(id="name" ,name="name" , placeholder="Your Name" ,type="input","[(ngModel)]"="model.Name", "#name"="ngModel" ,required).form-control.form_item
-          span(*ngIf="f.submitted && name.errors.required")  Name is required
+          span(*ngIf="f.submitted && !name.valid")  Name is required
         .col-lg-6.mb-1
-          input(id="email", name="email" , placeholder="Email Address", type="email", "[(ngModel)]"="model.email" ,"#email"="ngModel",required).form-control.form_item
-          span(*ngIf="f.submitted && email.errors.email")  Invalid email address
-          span(*ngIf="f.submitted && email.errors.required")  Email is required
+          input(id="email", name="email" , placeholder="Email Address", type="email", "[(ngModel)]"="model.email" ,"#email"="ngModel",required, pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$").form-control.form_item
+          span(*ngIf="f.submitted && !email.valid")  Invalid email address
       .row
         .col-lg-6.mb-1
           select(id="country" "(click)" = "getCities(" + value + ")").form-control.form_item
@@ -22,6 +21,7 @@ section.sect_form
           select(id="city" disabled="true").form-control.form_item
       .row
         .col-lg-12.mb-1
-          textarea.form-control(rows=5 id="comment" required).form-control.form_item
+          textarea.form-control(rows=5, name="comment","[(ngModel)]"="model.comment" ,"#comment"="ngModel", required).form-control.form_item
+          span(*ngIf="f.submitted && !comment.valid")  Comment is required
       button.btn.btn-primary(type="submit").m-3.backgraund-gradient Send Message
 
