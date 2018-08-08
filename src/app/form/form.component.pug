@@ -1,0 +1,27 @@
+section.sect_form
+  .div-center
+    .display-4
+      span.font-weight-bold Stay&nbsp;
+      span in touch
+    .display-5
+      span This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise, she lost sight of her in a moment.
+    form( "#f"="ngForm"  novalidate)
+      .row
+        .col-lg-6.mb-1
+          input(id="name" name="name"  placeholder="Your Name" type="input" "[(ngModel)]"="model.Name" "#name"="ngModel"   required).form-control.form_item
+          span(*ngIf="f.submitted && name.errors.required")  Name is required
+        .col-lg-6.mb-1
+          input(id="email" name="email"  placeholder="Email Address" type="email" required "[(ngModel)]"="model.email" "#email"="ngModel").form-control.form_item
+          span(*ngIf="f.submitted && email.errors.required")  Email is required
+          span(*ngIf="f.submitted && email.errors.email")  Invalid email address
+      .row
+        .col-lg-6.mb-1
+          select(id="country" "(click)" = "getCities("+value+")").form-control.form_item
+            option("*ngFor"="let country of countries ") {{country.name}}
+        .col-lg-6.mb-1
+          select(id="city" disabled="true").form-control.form_item
+      .row
+        .col-lg-12.mb-1
+          textarea.form-control(rows=5 id="comment" required).form-control.form_item
+      button.btn.btn-primary(type="submit").m-3.backgraund-gradient Send Message
+

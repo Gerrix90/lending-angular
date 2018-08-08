@@ -1,1 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+@import "../node_modules/bootstrap/scss/bootstrap";
+//@import "../node_modules/font-awesome/scss/font-awesome";
+@import "../node_modules/normalize.scss/normalize";
+
+
+@mixin font($size,$weight, $color,$line-height,$letter-spacing) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+body {
+  font-family: 'Nunito Sans';
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+section, header, footer {
+  border: solid 1px #e7e8ea;
+  padding-right: 135px;
+  padding-left: 135px;
+  @media (max-width: 960px){
+    padding-right: 75px;
+    padding-left: 135px;
+  }
+  @media (max-width: 665px){
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+
+html {
+  box-sizing: border-box;
+
+  @media (max-width: 600px){
+    font-size: 14px;
+  }
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+.clearfix {
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.download__button-group{
+  @include font(17px, bold, #282b31,normal,1px);
+  height: 50px;
+}
+
+.backgraund-gradient{
+  background-image: linear-gradient(107deg, #ff8e64, #ffe641);
+  color: #fff;
+}
+
+.btn {
+  border: 0;
+}
+
+.backgraund-gradient_yellow{
+  background-image: linear-gradient(107deg, #ff8e64, #ffe641);
+  height: 50px;
+  box-shadow: 0 6px 12px 0 rgba(40, 43, 49, 0.08);
+  width: 250px;
+}
+
+.backgraund-gradient_blue {
+  width: 130px;
+  height: 40px;
+  border-radius: 6px;
+  background-image: linear-gradient(107deg, #7956ec, #2fb9f8);
+  box-shadow: 0 6px 12px 0 rgba(40, 43, 49, 0.08);
+  @include font(17px, bold, #fff,normal,1px);
+}
+
+.backgraund-gradient_green {
+  background-image: linear-gradient(102deg, #009fc5, #3cecb0);
+  @include font(17px, bold, #282b31,normal,1px);
+  width: 235px;
+  height: 50px;
+  box-shadow: 0 6px 12px 0 rgba(40, 43, 49, 0.08);
+}
