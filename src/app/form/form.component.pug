@@ -8,15 +8,15 @@ section.sect_form
     form( "#f"="ngForm"  novalidate)
       .row
         .col-lg-6.mb-1
-          input(id="name" name="name"  placeholder="Your Name" type="input" "[(ngModel)]"="model.Name" "#name"="ngModel"   required).form-control.form_item
+          input(id="name" ,name="name" , placeholder="Your Name" ,type="input","[(ngModel)]"="model.Name", "#name"="ngModel" ,required).form-control.form_item
           span(*ngIf="f.submitted && name.errors.required")  Name is required
         .col-lg-6.mb-1
-          input(id="email" name="email"  placeholder="Email Address" type="email" required "[(ngModel)]"="model.email" "#email"="ngModel").form-control.form_item
-          span(*ngIf="f.submitted && email.errors.required")  Email is required
+          input(id="email", name="email" , placeholder="Email Address", type="email", "[(ngModel)]"="model.email" ,"#email"="ngModel",required).form-control.form_item
           span(*ngIf="f.submitted && email.errors.email")  Invalid email address
+          span(*ngIf="f.submitted && email.errors.required")  Email is required
       .row
         .col-lg-6.mb-1
-          select(id="country" "(click)" = "getCities("+value+")").form-control.form_item
+          select(id="country" "(click)" = "getCities(" + value + ")").form-control.form_item
             option("*ngFor"="let country of countries ") {{country.name}}
         .col-lg-6.mb-1
           select(id="city" disabled="true").form-control.form_item
