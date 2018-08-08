@@ -1,0 +1,23 @@
+@import '../../styles';
+.download{
+  padding: 80px 135px;
+  background:  #ccc url('../../assets/images/Base2.png') center/cover no-repeat;
+  @media (max-width: 960px){
+    padding: 40px 45px;
+  }
+  @media (max-width: 600px){
+    padding: 10px 15px;
+  }
+  p:first-child{
+    @include font(35px,normal,#fff,1.43,1px);
+  }
+  p:last-child{
+    @include font(16px,normal,rgba(255, 255, 255, 0.8),1.88,normal);
+  }
+  &__button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+  }
+}

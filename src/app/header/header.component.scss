@@ -1,0 +1,57 @@
+@import '../../styles';
+.header {
+  background: #ccc url('../../assets/images/Base.png') center/cover no-repeat;
+  max-height: 720px;
+  padding-left: auto;
+  padding-right: auto;
+  padding-top: 25px;
+
+  @media (max-width: 640px) {
+    height: auto;
+    max-height: none;
+  }
+  .navbar-brand {
+    @include font(20px, 800, #fff, normal, normal)
+  }
+  .nav-link {
+    @include font(15px, normal, #fff, normal, normal)
+  }
+  .tag-line {
+    @include font(35px, 300, #fff, 1.43, 1px);
+  }
+  .base {
+    width: 470px;
+    height: 708px;
+    background: url('../../assets/images/Tablet.png') center/cover no-repeat;
+    margin-top: 140px;
+    z-index: 1;
+    @media(max-width: 960px) {
+      width: 250px;
+      height: 400px;
+    }
+    @media(max-width: 640px) {
+      display: none;
+    }
+  }
+  .btn {
+    @include font(14px, bold, #282b31, normal, 1px);
+    height: 40px;
+  }
+  .logo {
+    margin-top: 230px;
+    width: 78px;
+    height: 78px;
+    background: url('../../assets/images/App_Icon.png') center/cover no-repeat;
+    @media (max-width:960px) {
+      margin-top: 130px;
+    }
+    @media (max-width:600px) {
+      margin-top: 30px;
+    }
+  }
+  .header_popup_menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

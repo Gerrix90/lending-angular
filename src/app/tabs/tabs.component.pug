@@ -1,0 +1,36 @@
+section.tabs
+  .row.tabs__row
+    .col-lg-6
+      .col-lg-10
+        .container
+          ul.nav.nav-pills.nav-stacked.tabs__list
+            li.tabs__item( "(click)"="step = 1;setTablet(step); " ,"[ngClass]"="{'active': step==1}")
+              .row
+                .col-lg-1
+                  .icon.icon__sync
+                .col-lg-10
+                  h3.tabs__header
+                    span.font-weight-bold Sync&nbsp;
+                    span across all devices
+                  p.tabs__description This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise, she lost sight of her in a moment.
+            li.tabs__item( "(click)"="step = 2; setTablet(step); " ,"[ngClass]"="{'active': step==2}")
+              .row
+                .col-lg-1
+                  .icon.icon__email
+                .col-lg-10
+                  h3.tabs__header
+                    span.font-weight-bold All&nbsp;
+                    span.font-weight-bold emails in one place
+                  p.tabs__description This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise, she lost sight of her in a moment.
+            li.tabs__item( "(click)"="step = 3; setTablet(step);" ,"[ngClass]"="{'active': step==3}")
+              .row
+                .col-lg-1
+                  .icon.icon__clock
+                .col-lg-10
+                  h3.tabs__header
+                    span.font-weight-bold Track&nbsp;
+                    span your time
+                  p.tabs__description This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise, she lost sight of her in a moment.
+    .col-lg-6
+      .tablet
+        img( src = "{{imageUrl}}" alt = "{{imageAlt}}").tablet_img

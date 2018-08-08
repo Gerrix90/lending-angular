@@ -1,0 +1,81 @@
+@import '../../styles';
+.forum {
+  display: flex;
+  padding-right: 0;
+  &__inform_block {
+    background-color: #fff;
+    &__header {
+      .stars {
+        margin-left: 135px;
+        margin-top: 144px;
+        width: 88px;
+        height: 15px;
+        background: url("../../assets/images/Stars.png") center/cover ;
+        @media (max-width: 960px) {
+          margin:40px 0 0 40px ;
+        }
+      }
+      .display-4 {
+        @include font(35px, 300, #282b31, 1.43, 1px);
+        margin-left: 135px;
+        margin-top: 54px;
+        margin-bottom: 120px;
+        @media (max-width: 960px) {
+          margin:40px;
+        }
+        @media (max-width: 600px) {
+          margin:10px;
+        }
+      }
+      @media (max-width: 960px) {
+        margin:40px 0 0 40px ;
+      }
+    }
+    &__footer{
+      margin: 20px 30px 120px 135px;
+      vertical-align: bottom;
+      @media (max-width: 960px) {
+        margin:10px 40px ;
+      }
+      ul {
+        list-style-image: url("../../assets/images/ArrowIcon.png");
+      }
+      h5{
+        @include font (15px,bold,#999ea8,3.33, 0.4px);
+      }
+      @media (max-width: 600px) {
+        margin: 10px ;
+      }
+    }
+  }
+  &__forum{
+    background: #e7e8ea;
+    padding: 120px 135px 120px 100px;
+    height: 100%;
+    @include font(14px, normal,#282b31,1.79,normal);
+    @media (max-width: 960px) {
+      padding: 30px;
+    }
+    .media{
+      margin: 10px;
+      border-radius: 12px;
+      background-color: #ffffff;
+      box-shadow: 0 6px 12px 0 rgba(32, 33, 39, 0.08);
+    }
+    .media:nth-child(2n){
+      margin-left: 100px;
+      @media (max-width: 960px){
+        margin-left: 20px;
+      }
+    }
+    .media:nth-child(2n+1){
+      margin-right: 100px;
+      @media (max-width: 960px){
+        margin-right: 20px;
+      }
+    }
+    hr, span, i{
+      @include font(12px, normal, #999ea8, 2.08,normal);
+    }
+  }
+}

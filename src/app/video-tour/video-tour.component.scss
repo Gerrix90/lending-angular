@@ -1,0 +1,44 @@
+@import '../../styles';
+.video {
+  height: 520px;
+  padding: 0 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .display-4 {
+    @include font(35px, 300,  #fff, 1.43, normal);
+  }
+  .display-5 {
+    @include font(16px, normal,  rgba(255, 255, 255, 0.8), 1.88, normal);
+  }
+  &__button {
+    background: url("../../assets/images/PlayButton.png") center/cover no-repeat;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+  }
+  &__flex_item {
+    text-align: center;
+  }
+  &__content{
+    position: absolute;
+    width: auto;
+    z-index: 2;
+  }
+}
+video {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(107deg, #7956eb, #2fb9f8);
+  opacity: 0.7;
+  z-index: 1;
+}
+

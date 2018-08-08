@@ -1,0 +1,43 @@
+section.plan_select
+  .row
+    .col-lg-5
+      .display-4.styles__flex_box
+        span.font-weight-bold Choose&nbsp;
+        span your plan
+      .display-5
+        span This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red Queen. To her surprise, she lost sight of her in a moment, and found herself walking.
+      form
+        .form-group.form-inline
+          label(for='select_plan').col-form-label.pr-2 Select the number of licenses:
+          select.form-control(id="Select_Plan", '[(ngModel)]'="saleNum", name="saleNum", "(click)" = "setPrice()")
+            each value in [1, 2, 3]
+              option=value
+
+        .form-group
+          label(for="promo") Enter the promo code:
+          .form-inline.text-center
+            input.form-control.plan_select__promo.mr-3(type="password", id="promo", placeholder="promo code",name="promo", '[(ngModel)]'="promo")
+            .button.btn.btn-primary.mb-0(type="submit",  "(click)" = "setPriceByPromo()").backgraund-gradient_blue Apply
+    .col-lg-7
+      .plan_select__tablet
+        .plan_select__tablet__blue.text-center
+          .plan_select__tablet__blue__header
+            h3.plan_select__tablet__blue__header__h3.text-uppercase Professional
+          h2.plan_select__tablet__blue__header__h2 {{price}}$
+          ul.plan_select__tablet__blue__header__list
+            li Hundreds of elements
+            li Style guide
+            li 160 icons included
+            li Sketch files
+            li Commercial licence
+          button.btn.btn-secondary.backgraund-gradient_yellow  Buy Now
+        .plan_select__tablet__white.text-center
+          .plan_select__tablet__white__header
+            h3.plan_select__tablet__white__header__h3.text-uppercase STARTER
+          h2.plan_select__tablet__white__header__h2.text-uppercase free
+          ul.plan_select__tablet__white__header__list
+            li Hundreds of elements
+            li Style guide
+            li 30 icons included
+            li Personal licence
+          button.btn.btn-secondary.backgraund-gradient_green  Get Free

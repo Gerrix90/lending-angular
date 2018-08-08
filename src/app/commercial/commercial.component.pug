@@ -1,0 +1,7 @@
+-var items = ['wired','lifehacker','mashable','theverge','gizmodo','macworld']
+section.sponsors
+  .container
+    .row
+      each item in items
+        a.sponsor.col-lg-2(href="#")
+          img(src='../assets/images/'+item+'.png' alt=item)

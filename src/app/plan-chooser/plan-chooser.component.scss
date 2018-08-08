@@ -1,0 +1,107 @@
+@import '../../styles';
+.plan_select {
+  padding: 135px 135px 120px 135px;
+  background: #e7e8ea;
+  @media (max-width: 960px) {
+    padding:50px
+  }
+  @media (max-width: 600px) {
+    padding:10px
+  }
+  .row {
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+  }
+  select {
+    width: auto;
+  }
+  &__promo {
+    width: auto;
+  }
+  &__tablet {
+    display: flex;
+    height: auto;
+    ul {
+      list-style-image: url("../../assets/images/SuccessIcon.png");
+    }
+    &__blue {
+      width: 350px;
+      height: 510px;
+      border-radius: 12px;
+      background: url("../../assets/images/BaseTablet.png") center/cover no-repeat;
+      z-index: 1;
+      @media (max-width: 960px) {
+        width: 250px;
+      }
+      &__header {
+        height: 39px;
+        background-color: rgba(255, 255, 255, 0.07);
+        box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.3), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+        margin-top: 50px;
+        &__h3 {
+          @include font(11px, 800, #fff, normal, 2px);
+          margin-bottom: 0px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+        }
+        &__h2 {
+          @include font(60px, 300, #fff, normal, normal)
+        }
+        &__list {
+          @include font(15px, normal, #fff, 2, normal);
+          padding-left: 0px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    &__white {
+      position: absolute;
+      margin-left: 335px;
+      margin-top: 20px;
+      width: 335px;
+      height: 460px;
+      border-radius: 12px;
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px 0 rgba(32, 33, 39, 0.12);
+      padding-left: -20px;
+      z-index: 0;
+      @media (max-width: 960px) {
+        position: center;
+        width: 225px;
+      }
+
+      &__header {
+        height: 39px;
+        background-color: #f8f9fa;
+        box-shadow: 0 1px 0 0 #e7e8ea, inset 0 1px 0 0 #e7e8ea;
+        margin-top: 50px;
+        &__h3 {
+          @include font(11px, 800, #676c75, normal, 2px);
+          margin-bottom: 0px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+        }
+        &__h2 {
+          @include font(40px, 300, #282b31, normal, normal)
+        }
+        &__list {
+          @include font(15px, normal, #676c75, 2, normal);
+          padding-left: 0px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+

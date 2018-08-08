@@ -1,0 +1,39 @@
+@import '../../styles';
+.sect_form {
+  padding: 135px 135px 120px 135px;
+  background: url("../../assets/images/Base.png") center/cover no-repeat;
+  @media (max-width: 960px){
+    padding: 30px;
+  }
+  @media (max-width: 665px){
+    padding: 0;
+  }
+  .display-4 {
+    @include font(35px, 300,  #fff, 1.43, normal);
+  }
+  .display-5 {
+    @include font(16px, normal,  rgba(255, 255, 255, 0.8), 1.88, normal);
+  }
+  .form_item {
+    background-color: #e7e8ea;
+  }
+  .div-center{
+    width: 100%;
+    text-align: center;
+  }
+  form {
+    width: 50%;
+    margin: 40px auto;
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 70px;
+    box-shadow: 0 12px 24px 0 rgba(40, 43, 49, 0.16);
+    .col-lg-6, .col-lg-12{
+      padding: 10px;
+    }
+    @media (max-width: 960px){
+      padding: 15px;
+      margin: 15px auto;
+    }
+  }
+}

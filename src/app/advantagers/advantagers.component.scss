@@ -1,0 +1,45 @@
+@import '../../styles';
+.styles{
+  padding: 120px 135px;
+  background-color: #e7e8ea;
+  @media (max-width: 960px) {
+    padding: 60px;
+  }
+  @media (max-width: 960px) {
+    padding: 10px;
+  }
+  .row {
+    height: 590px;
+    weight: 50%
+  }
+  &__container {
+    box-shadow: 0 6px 12px 0 rgba(32, 33, 39, 0.08);
+  }
+  .display-4 {
+    @include font(35px, 300,  #282b31, 1.43, normal);
+    margin-top: 67px;
+    justify-content: center;
+  }
+  small {
+    @include font(16px, normal,  #676c75, 1.88, normal);
+  }
+  &__flex_box {
+    width: auto;
+  }
+  .item1 {
+    background: url("../../assets/images/Image1.png") center/cover no-repeat;
+  }
+
+  .item4 {
+    background: url("../../assets/images/Image2.png") center/cover no-repeat;
+  }
+
+  .item23 {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+  }
+}
+

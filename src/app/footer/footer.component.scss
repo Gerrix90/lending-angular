@@ -1,0 +1,37 @@
+@import '../../styles';
+.footer{
+  padding: 31px  135px ;
+  .appStarter{
+    @include font(25px,800,#282b31,1.25,normal)
+  }
+  .author,.footer__line{
+    @include font(11px,normal,#999ea8,normal,normal)
+  }
+  .fa-heart{
+    width: 12px;
+    height: 11px;
+    color: #ff4876;
+  }
+  &__contacts{
+    color:#b9bdc3;
+    display: flex;
+    &__icon {
+      min-width: 40px;
+      min-height: 40px;
+      border-radius: 6px;
+      background-color: #ffffff;
+      border: solid 1px #e7e8ea;
+      a {
+        text-decoration: none;
+        i {
+          padding: 12px 12px;
+          color: #b9bdc3;
+        }
+      }
+    }
+
+  }
+  .author-name{
+    @include font(11px,normal,#282b31,normal,normal)
+  }
+}

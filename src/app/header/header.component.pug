@@ -1,0 +1,35 @@
+-var links = ['Features','Video Tour','Reviews','Pricing']
+header.header
+  nav.navbar-expand-sm
+    .row
+      .col-lg-5.col-md-4.col-sm-12
+        a.navbar-brand(href="#") AppStarter
+      .col-lg-7.col-md-8.col-sm-10.text-center
+        ul.navbar-nav.justify-content-end
+          each link in links
+            li.nav-item.text-nowrap
+              a.nav-link(href="#")=link
+          li.nav-item
+            button.btn.text-uppercase(type="button")   GET IT FREE
+          li.nav-item.header_popup_menu.m-3
+            i.fa.fa-bars.text-white
+    .row.align-middle
+      .col-lg-6.col-md-6.col-sm-8
+        .logo
+        .tag-line
+          span.font-weight-bold AppStarter.
+          span Best landing page
+          p for web and mobile apps
+        .button-group.mb-3
+          button.btn.col-lg-4.mr-3.backgraund-gradient(type="button")  Download Now
+          button.btn.col-lg-4(type="button")  Watch Video
+      .col-lg-6.col-md-6
+        .base
+
+
+
+
+
+
+
+
