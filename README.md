@@ -10,6 +10,11 @@
 
 ⋅⋅* https://github.com/shpulya/test-app-angular.git
 
+## Set dependencies from package.json
+
+Run next command from commandline in project root folder
+⋅⋅* npm i
+
 ## Development server
 
 Run next command from commandline in project root folder and navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
