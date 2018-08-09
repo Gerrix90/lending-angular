@@ -3,7 +3,6 @@
 //@import "../node_modules/font-awesome/scss/font-awesome";
 @import "../node_modules/normalize.scss/normalize";
 
-
 @mixin font($size,$weight, $color,$line-height,$letter-spacing) {
   font-size: $size;
   font-weight: $weight;
