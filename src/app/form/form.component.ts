@@ -2,6 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
+interface CitiesResponse
+{
+  totalResultsCount: number;
+  geonames: any;
+}
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.pug',
@@ -269,7 +275,7 @@ export class FormComponent implements OnInit {
   loadCities() {
     const url = 'http://api.geonames.org/searchJSON?username=ksuhiyp&country=US&maxRows=100&style=SHORT';
     this.http.get(url).subscribe(response => {
-      const result = response;
+      const result = response as CitiesResponse;
       this.cities = result.geonames;
     });
   }
