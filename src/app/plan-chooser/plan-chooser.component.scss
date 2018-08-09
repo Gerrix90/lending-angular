@@ -22,6 +22,9 @@
   &__tablet {
     display: flex;
     height: auto;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
     ul {
       list-style-image: url("../../assets/images/SuccessIcon.png");
     }
@@ -33,6 +36,7 @@
       z-index: 1;
       @media (max-width: 960px) {
         width: 250px;
+        height: 380px;
       }
       &__header {
         height: 39px;
@@ -74,6 +78,8 @@
       @media (max-width: 960px) {
         position: center;
         width: 225px;
+        margin-left: 225px;
+        height: 330px;
       }
 
       &__header {

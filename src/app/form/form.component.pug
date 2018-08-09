@@ -18,7 +18,8 @@ section.sect_form
           select(id="country" "(click)" = "getCities(" + value + ")").form-control.form_item
             option("*ngFor"="let country of countries ") {{country.name}}
         .col-lg-6.mb-1
-          select(id="city" disabled="true").form-control.form_item
+          select(id="city" ).form-control.form_item
+            option("*ngFor"="let city of cities") {{city.name}}
       .row
         .col-lg-12.mb-1
           textarea.form-control(rows=5, name="comment","[(ngModel)]"="model.comment" ,"#comment"="ngModel", required).form-control.form_item

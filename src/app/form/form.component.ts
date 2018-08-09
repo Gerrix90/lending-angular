@@ -8,8 +8,8 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  model: any = {};
-  cities: any = [];
+  model: any = [];
+  cities: any;
   country: string;
   countries = [
     {name: 'Afghanistan', code: 'AF'},
@@ -259,19 +259,22 @@ export class FormComponent implements OnInit {
 
   f: FormGroup;
   constructor(private http: HttpClient) {
+    this.loadCities();
   }
 
   ngOnInit() {
-    this.f = new FormGroup({
-      'name': new FormControl(null, [Validators.required], this.forbiddenName),
-      'email': new FormControl(null, [Validators.required, Validators.email])
+
+  }
+
+  loadCities() {
+    const url = 'http://api.geonames.org/searchJSON?username=ksuhiyp&country=US&maxRows=100&style=SHORT';
+    this.http.get(url).subscribe(response => {
+      const result = response;
+      this.cities = result.geonames;
     });
   }
 
-  getCities(country) {
-    const url = 'http://api.geonames.org/searchJSON?username=ksuhiyp&country=' + country + '&maxRows=1000&style=SHORT';
-    this.http.get(url).subscribe((response) => {
-      this.cities = response;
-    });
+  getCities(country){
+
   }
 }

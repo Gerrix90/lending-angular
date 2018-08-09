@@ -7,16 +7,11 @@ import * as $ from 'jquery';
   styleUrls: ['./video-tour.component.scss']
 })
 export class VideoTourComponent implements OnInit {
-  bool: boolean =false;
+  bool: boolean;
   constructor() { }
 
   ngOnInit() {
     this.bool = false;
   }
-  setBool() {
-    if ($("video").paused)
-      $("video").play();
-    else
-      $("video").pause();
-  }
+
 }
