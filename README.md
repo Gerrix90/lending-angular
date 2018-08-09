@@ -1,6 +1,6 @@
 # To run application you need:
 
-## Install Node.js (https://nodejs.org/uk/download/)
+## Check Node.js (https://nodejs.org/uk/download/) (was developed using >node -v  v8.11.3;   >npm -v   5.6.0)
 
 ## Install Angular CLI version 5.6.0
 
