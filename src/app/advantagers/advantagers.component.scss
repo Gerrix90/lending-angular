@@ -33,7 +33,9 @@
   .item4 {
     background: url("../../assets/images/Image2.png") center/cover no-repeat;
   }
-
+  .item1, .item4 {
+    height: 100%;
+  }
   .item23 {
     background-color: #fff;
     display: flex;
