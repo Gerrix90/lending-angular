@@ -1,19 +1,22 @@
 @import '../../styles';
+$height-element: 590px;
 .styles{
   padding: 120px 135px;
   background-color: #e7e8ea;
   @media (max-width: 960px) {
     padding: 60px;
+    height: 3*$height-element;
   }
-  @media (max-width: 960px) {
+  @media (max-width: 600px) {
     padding: 10px;
   }
   .row {
-    height: 590px;
-    weight: 50%
+    height: $height-element;
+
   }
   &__container {
     box-shadow: 0 6px 12px 0 rgba(32, 33, 39, 0.08);
+    height: auto;
   }
   .display-4 {
     @include font(35px, 300,  #282b31, 1.43, normal);
@@ -25,6 +28,7 @@
   }
   &__flex_box {
     width: auto;
+    height: auto;
   }
   .item1 {
     background: url("../../assets/images/Image1.png") center/cover no-repeat;
@@ -36,12 +40,13 @@
   .item1, .item4 {
     height: 100%;
   }
-  .item23 {
+  .item2, .item3 {
     background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 100px;
+    overflow: auto;
   }
 }
 
