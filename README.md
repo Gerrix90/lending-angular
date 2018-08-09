@@ -24,7 +24,7 @@ Run next command from commandline in project root folder and navigate to `http:/
 
 ##### Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ##### Further help
 
