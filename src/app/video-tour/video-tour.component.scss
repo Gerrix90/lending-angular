@@ -1,6 +1,5 @@
 @import '../../styles';
 .video {
-  height: 520px;
   padding: 0 0;
   position: relative;
   overflow: hidden;
@@ -9,9 +8,15 @@
   justify-content: center;
   .display-4 {
     @include font(35px, 300,  #fff, 1.43, normal);
+    @media (max-width: 665px) {
+      display: none;
+    }
   }
   .display-5 {
     @include font(16px, normal,  rgba(255, 255, 255, 0.8), 1.88, normal);
+    @media (max-width: 665px) {
+      display: none;
+    }
   }
   &__button {
     background: url("../../assets/images/PlayButton.png") center/cover no-repeat;
@@ -28,9 +33,16 @@
     z-index: 2;
   }
   video {
-    position: absolute;
+
     width: 100%;
     z-index: 0;
+
+    top: 0;
+    left: 0;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
 
   }
   .overlay {

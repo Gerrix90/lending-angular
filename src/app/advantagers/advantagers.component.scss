@@ -1,20 +1,16 @@
 @import '../../styles';
-$height-element: 590px;
+
 .styles{
-  padding: 120px 135px;
+  padding: 8%;
   background-color: #e7e8ea;
   @media (max-width: 960px) {
-    padding: 60px;
-    height: 3*$height-element;
-  }
-  @media (max-width: 600px) {
-    padding: 10px;
-  }
-  .row {
-    height: $height-element;
+    padding: 5%;
 
   }
-  &__container {
+  @media (max-width: 600px) {
+    padding: 2%;
+  }
+  .container {
     box-shadow: 0 6px 12px 0 rgba(32, 33, 39, 0.08);
     height: auto;
   }
@@ -32,13 +28,13 @@ $height-element: 590px;
   }
   .item1 {
     background: url("../../assets/images/Image1.png") center/cover no-repeat;
-  }
 
+  }
   .item4 {
     background: url("../../assets/images/Image2.png") center/cover no-repeat;
   }
   .item1, .item4 {
-    height: 100%;
+    min-height: 300px;
   }
   .item2, .item3 {
     background-color: #fff;
@@ -47,6 +43,9 @@ $height-element: 590px;
     justify-content: center;
     padding: 100px;
     overflow: auto;
+    @media (max-width: 665px) {
+      padding: 20px 10px;
+    }
   }
 }
 

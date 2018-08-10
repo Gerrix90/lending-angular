@@ -1,6 +1,13 @@
 @import '../../styles';
 .footer{
   padding: 31px  135px ;
+  @media (max-width: 960px) {
+    padding: 50px;
+  }
+  @media (max-width: 600px) {
+    padding: 20px;
+    text-align: center;
+  }
   .appStarter{
     @include font(25px,800,#282b31,1.25,normal)
   }
@@ -15,12 +22,17 @@
   &__contacts{
     color:#b9bdc3;
     display: flex;
+
     &__icon {
+
       min-width: 40px;
       min-height: 40px;
       border-radius: 6px;
       background-color: #ffffff;
       border: solid 1px #e7e8ea;
+      @media (max-width: 665px) {
+        margin: 0 auto;
+      }
       a {
         text-decoration: none;
         i {

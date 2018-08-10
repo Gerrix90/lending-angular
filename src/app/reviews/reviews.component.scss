@@ -6,7 +6,7 @@
     background-color: #fff;
     &__header {
       .stars {
-        margin-left: 135px;
+
         margin-top: 144px;
         width: 88px;
         height: 15px;
@@ -17,14 +17,13 @@
       }
       .display-4 {
         @include font(35px, 300, #282b31, 1.43, 1px);
-        margin-left: 135px;
         margin-top: 54px;
         margin-bottom: 120px;
         @media (max-width: 960px) {
-          margin:40px;
+
         }
         @media (max-width: 600px) {
-          margin:10px;
+
         }
       }
       @media (max-width: 960px) {
@@ -50,7 +49,7 @@
   }
   &__forum{
     background: #e7e8ea;
-    padding: 120px 135px 120px 100px;
+    padding: 7% 10% 7% 4%;
     height: 100%;
     @include font(14px, normal,#282b31,1.79,normal);
     @media (max-width: 960px) {
@@ -63,15 +62,16 @@
       box-shadow: 0 6px 12px 0 rgba(32, 33, 39, 0.08);
     }
     .media:nth-child(2n){
-      margin-left: 100px;
+      margin-left: 7%;
       @media (max-width: 960px){
-        margin-left: 20px;
+        margin-left: 2%;
       }
     }
     .media:nth-child(2n+1){
-      margin-right: 100px;
+      margin-right: 7%;
       @media (max-width: 960px){
-        margin-right: 20px;
+        margin-right: 2%;
+        text-align: left;
       }
     }
     hr, span, i{

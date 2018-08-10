@@ -22,21 +22,27 @@
   &__tablet {
     display: flex;
     height: auto;
-    @media (max-width: 600px) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    @media (max-width: 665px) {
       width: 100%;
     }
     ul {
       list-style-image: url("../../assets/images/SuccessIcon.png");
     }
     &__blue {
-      width: 350px;
-      height: 510px;
+      width: 45%;
+      padding: 25px 0 100px 0;
       border-radius: 12px;
-      background: url("../../assets/images/BaseTablet.png") center/cover no-repeat;
+      box-shadow: 0 1px 3px 0 rgba(32, 33, 39, 0.12);
+      background: url("../../assets/images/BaseTablet.png") no-repeat center center fixed;
+      background-size: cover;
       z-index: 1;
-      @media (max-width: 600px) {
-        width: 250px;
-        height: 380px;
+
+      @media (max-width: 665px) {
+        padding: 10px  0 100px 0;
+        width: 80%;
+        margin: 10px  auto;
       }
       &__header {
         height: 39px;
@@ -66,20 +72,20 @@
     }
     &__white {
       position: absolute;
-      margin-left: 335px;
+      margin-left: 42%;
       margin-top: 20px;
-      width: 335px;
-      height: 460px;
+      width: 43%;
+      padding: 20px 0 80px 0;
       border-radius: 12px;
       background-color: #ffffff;
       box-shadow: 0 1px 3px 0 rgba(32, 33, 39, 0.12);
-      padding-left: -20px;
       z-index: 0;
-      @media (max-width: 600px) {
-        position: center;
-        width: 225px;
-        margin-left: 225px;
-        height: 330px;
+      @media (max-width: 665px) {
+        position: relative;
+        padding: 15px 0 100px 0;
+        width: 80%;
+        margin: 10px  auto;
+
       }
 
       &__header {

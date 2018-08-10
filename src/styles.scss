@@ -20,15 +20,15 @@ body {
 
 section, header, footer {
   border: solid 1px #e7e8ea;
-  padding-right: 135px;
-  padding-left: 135px;
+  padding-right: 8%;
+  padding-left: 8%;
   @media (max-width: 960px){
-    padding-right: 75px;
-    padding-left: 65px;
+    padding-right: 5%;
+    padding-left: 5%;
   }
   @media (max-width: 665px){
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 2%;
+    padding-left: 2%;
   }
 }
 
@@ -77,11 +77,11 @@ ol {
   background-image: linear-gradient(107deg, #ff8e64, #ffe641);
   height: 50px;
   box-shadow: 0 6px 12px 0 rgba(40, 43, 49, 0.08);
-  width: 250px;
+  width: 60%;
 }
 
 .backgraund-gradient_blue {
-  width: 130px;
+  width: 25%;
   height: 40px;
   border-radius: 6px;
   background-image: linear-gradient(107deg, #7956ec, #2fb9f8);
@@ -92,7 +92,7 @@ ol {
 .backgraund-gradient_green {
   background-image: linear-gradient(102deg, #009fc5, #3cecb0);
   @include font(17px, bold, #282b31,normal,1px);
-  width: 235px;
+  width: 60%;
   height: 50px;
   box-shadow: 0 6px 12px 0 rgba(40, 43, 49, 0.08);
 }
